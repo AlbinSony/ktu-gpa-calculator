@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// const PORT = 3000;
+const PORT = 3000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -21,7 +21,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/calculateSGPA', indexRouter);
 app.use('/users', usersRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,9 +42,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// app.listen(PORT, function(err){
-//   if (err) console.log("Error in server setup")
-//   console.log("Server listening on Port", PORT);
-// })
+app.listen(PORT, function(err){
+  if (err) console.log("Error in server setup")
+  console.log("Server listening on Port", PORT);
+})
 
 module.exports = app;

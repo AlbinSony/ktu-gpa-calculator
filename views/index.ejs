@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTU GPA Calculator</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <h1>Kerala Technological University GPA Calculator</h1>
+
+    <!-- Calculate SGPA Button -->
+    <form action="/calculateSGPA" method="get">
+        <button type="submit" name="calcSGPA">Calculate SGPA</button>
+    </form>
+
+    <!-- Calculate CGPA Button -->
+    <form action="/calculateCGPA" method="POST">
+        <button type="submit" name="calcCGPA">Calculate CGPA</button>
+    </form>
+
+</body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+    <h1>SGPA Calculator</h1>
+
+    <!-- Form for entering branch, department, and subject grades -->
+    <form action="/calculateSGPA" method="POST">
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+            <!-- Add options for branches dynamically based on your application -->
+            <option value="cse">Computer Science and Engineering</option>
+            <option value="ece">Electronics and Communication Engineering</option>
+            <!-- Add more branches as needed -->
+        </select>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <!-- Subject grades input fields (dynamic based on branch and department) -->
+        <!-- Example subjects for CSE -->
+        <label for="subject1">Subject 1 Grade:</label>
+        <input type="text" id="subject1" name="subject1" required>
+
+        <label for="subject2">Subject 2 Grade:</label>
+        <input type="text" id="subject2" name="subject2" required>
+
+        <!-- Add more subject input fields dynamically based on branch and department -->
+
+        <!-- Calculate SGPA Button -->
+        <button type="submit" name="calcSGPA">Calculate SGPA</button>
+    </form>
+
+</body>
+</html>
